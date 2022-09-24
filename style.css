@@ -75,4 +75,33 @@ button {
 
 #game {
     display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30vw;
+}
+
+#new {
+    font-size: clamp(15px, 2vw, 20px);
+    height: clamp(1px, 8vh, 30px);
+    padding: 8px 3vw;
+    margin: 0;
+}
+
+.box {
+
+}
+
+ul {
+    height: 30vh;
+    border: 0.5vw solid var(--color5);
+    border-radius: 4vw;
+    
 }

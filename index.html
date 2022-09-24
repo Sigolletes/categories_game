@@ -25,7 +25,30 @@
     </div>
 
     <div class="container" id="game">
+        
+        <div id="scoreBox" class="box">
+            <div id="score">
+                <div>Player 1: <span></span id="score1"></div>
+                <div>Player2: <span></span id="score2"></div>
+            </div>
 
+            <button type="button" id="new">New Game</button>
+        </div>
+
+        <div class="box">
+            <button #newList>New list</button>
+            <ul id="list"></ul>
+
+            <form>
+                <label for="result1">Enter the result of <span id="1name"></span>:</label>
+                <input type="number" id="result1" name="result1" required  min="0" max="10">
+                <label for="result2">Enter the result of <span id="2name"></span>:</label>
+                <input type="number" id="result2" name="result2" required min="0" max="10">
+                <button id="setScore" type="button">SET SCORE</button>
+                </form>
+
+        </div>
+        
     </div>
     
 </body>
