@@ -37,11 +37,23 @@ let
 
 const 
     page4 = document.querySelector("#page4"),
-    setScore = document.querySelector("#setScore");
+    setScore = document.querySelector("#setScore"),
+    endGame = document.querySelector("#endGame");
 
 let
     result1 = document.querySelector("#result1"),
     result2 = document.querySelector("#result2");
+    resultTitle1 = document.querySelector("#resultTitle1");
+    resultTitle2 = document.querySelector("#resultTitle2");
+
+    // PAGE 5
+
+    const 
+        winner = document.querySelector("#winner"),
+        result = document.querySelector("#result"),
+        endScore = document.querySelector("#endScore"),
+        page5 = document.querySelector("#page5"),
+        home = document.querySelector("#home");
 
     // LOGICAL PURPOSES
 
@@ -90,15 +102,106 @@ start.addEventListener("click", () => {
 
 // PAGE 3 - GAME
 
-setResults.addEventListener("Click", () => {
+setResults.addEventListener("click", () => {
     page3.style.display = "none";
     page4.style.display = "flex";
+
+    resultTitle1.innerText = `${player1.value}: `;
+    resultTitle2.innerText = `${player2.value}: `;
 });
 
 
 
 // PAGE 4 - SET SCORE AND END
 
+setScore.addEventListener("click", () => {
+    if (result1.validity.valid && result2.validity.valid) {
+        scoreOne += Number(result1.value);
+        scoreTwo += Number(result2.value);
+    
+        score1.textContent = `${scoreOne}`;
+        score2.textContent = `${scoreTwo}`;
+
+        result1.value = "";
+        result2.value = "";
+    
+        page3.style.display = "flex";
+        page4.style.display = "none";
+
+        list.textContent = "";
+
+        let newList = getList();
+        newList.forEach((el) => {
+            let li = document.createElement("li");
+            li.innerText = el;
+            list.appendChild(li);
+        });
+
+        let newLetter = getLetter();
+        letter.innerText = newLetter;
+    }
+});
+
+endGame.addEventListener("click", () => {
+    if (result1.validity.valid && result2.validity.valid) {
+
+        page5.style.display = "flex";
+        page4.style.display = "none";
+
+        scoreOne += Number(result1.value);
+        scoreTwo += Number(result2.value);
+
+        score1.textContent = `${scoreOne}`;
+        score2.textContent = `${scoreTwo}`;
+
+        name1.innerText = `${player1.value}: `;
+        name2.innerText = `${player2.value}: `;
+
+        if (scoreOne > scoreTwo) {
+
+            result.innerText = "The winner is";
+
+            winner.innerText = `${player1.value}`;
+
+            endScore.innerText = `${player1.value}:  ${scoreOne}
+            ${player2.value}:  ${scoreTwo}`;
+
+        } else if (scoreTwo > scoreOne) {
+
+            result.innerText = "The winner is";
+
+            winner.innerText = `${player2.value}`;
+
+            endScore.innerText = `${player2.value}:  ${scoreTwo}
+            ${player1.value}:  ${scoreOne}`;
+
+        } else {
+
+            winner.innerText = "You were tied";
+
+            endScore.innerText = `${player1.value}:  ${scoreOne}
+            ${player2.value}:  ${scoreTwo}`;
+        }
+
+        scoreOne = 0;
+        scoreTwo = 0;
+    
+        score1.textContent = "";
+        score2.textContent = "";
+
+        player1.value = "";
+        player2.value = "";
+    }
+});
+
+
+
+//  PAGE 5 - THE WINNER IS
+
+home.addEventListener("click", () => {
+    page1.style.display = "flex";
+    page5.style.display = "none";
+})
 
 
 

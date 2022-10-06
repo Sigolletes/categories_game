@@ -13,7 +13,7 @@
 <body>
 
 
-    <!-- PAGE 1 - START -->
+<!-- PAGE 1 - START -->
 
     <div class="container" id="page1">
         <button id="startGame" type="button">START GAME</button>
@@ -27,7 +27,7 @@
 
 
 
-    <!-- PAGE 2 - NAMES -->
+<!-- PAGE 2 - NAMES -->
 
     <div class="container" id="page2">
         <h1>ENTER THE NAMES OF THE PLAYERS</h1>
@@ -48,7 +48,7 @@
 
 
 
-    <!-- PAGE 3 - GAME -->
+<!-- PAGE 3 - GAME -->
 
     <div class="container" id="page3">
         
@@ -56,7 +56,8 @@
 
             <div class="scoreBox">
 
-                <div id="name1">Player 1: <span id="score1"></span></div>
+                <div id="name1"></div>
+                <div id="score1"></div>
 
             </div>
 
@@ -64,7 +65,8 @@
 
             <div class="scoreBox">
 
-                <div id="name2">Player2: <span id="score2"></span></div>
+                <div id="name2"></div>
+                <div id="score2"></div>
 
             </div>
 
@@ -72,7 +74,7 @@
 
         <div id="listBox">
 
-            <div id="letter">A</div>
+            <div id="letter"></div>
 
             <ul id="list"></ul>
 
@@ -83,7 +85,7 @@
 
 
 
-    <!-- PAGE 4 - SET SCORE AND END -->
+<!-- PAGE 4 - SET SCORE AND END -->
 
     <div class="container" id="page4">
 
@@ -92,22 +94,41 @@
             <h1>SET THE RESULTS</h1>
 
             <div>
-                <label for="result1">Player 1: </label>
+                <label id="resultTitle1" for="result1">PLAYER 1</label>
                 <input type="number" id="result1" name="result1" required  min="0" max="10">
             </div>
 
             <div>
-                <label for="result2">Player 2: </label>
+                <label id="resultTitle2" for="result2">PLAYER 2</label>
                 <input type="number" id="result2" name="result2" required min="0" max="10">
             </div>
 
             <div>
-                <button id="setScore" type="button">SET SCORE</button>
+                <button id="setScore" type="button">PLAY AGAIN</button>
+
+                <button id="endGame" type="button">END THE GAME</button>
             </div>
 
         </form>
     </div>
 
+
+
+
+
+<!-- PAGE 5 - THE WINNER IS -->
+
+<div class="container" id="page5">
+
+    <div id="result"></div>
+
+    <h1 id="winner"></h1>
+
+    <div id="endScore"></div>
+
+    <button type="button" id="home">HOME</button>
+
+</div>
 
 
 </body>
