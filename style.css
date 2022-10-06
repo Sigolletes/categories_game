@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "YahfieNormal";
+    font-family: "YahfieNormal", monospace, "Segoe UI";
     font-weight: 500;
 }
 
@@ -26,41 +26,32 @@ body {
     padding: 5%;
 }
 
+
+
+/* SHARED STYLES */
+
 h1 {
-    font-size: clamp(20px, 6vw, 60px);
+    font-size: clamp(25px, 7vw, 40px);
+    margin-bottom: 5vh; 
 }
 
 .container {
     display: flex;
-    gap: 6vh;
     width: 100%;
     height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--color4);
-    border-radius: 4vw;
-    border: 0.7vw double var(--color5);
-    padding: min();
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    font-size: clamp(20px, 2.5vw, 35px);
-    gap: 0.4vh;
+    border-radius: 2em;
+    border: 6px double var(--color5);
+    padding: 4%;
 }
 
 input, button {
     border-radius: 20%;
     border: 0.3vh solid var(--color5);
     text-align: center;
-}
-
-input {
-    margin: 5%;
-    font-size: clamp(15px, 2vw, 20px);
-    height: clamp(8px, 8vh, 40px);
 }
 
 button {
@@ -71,37 +62,117 @@ button {
     background-color: var(--color3);
 }
 
-
-
-#game {
-    display:none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+input {
+    margin: 5%;
+    font-size: clamp(15px, 2vw, 20px);
+    height: clamp(8px, 8vh, 40px);
+    background-color: var(--color2);
+    color: var(--color1);
 }
 
-#scoreBox {
+
+
+/* PAGE 1 - START */
+
+#page1 {
+    display: flex;
+}
+
+/* PAGE 2 - NAMES */
+
+#page2 {
+    display: none;
+    gap: 6vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(23px, 2vw, 32px);
+    gap: 0.4vh;
+}
+
+
+
+/* PAGE 3 - GAME */
+
+#page3 {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#scoreLetter {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    gap: 30vw;
+    justify-content: space-around;
+    border-radius: 2em;
+    border: 0.3vh solid var(--color5);
+    background-color: var(--color2);
+    width: 70vw;
+    height: auto;
+    padding: 1vh 0;
 }
 
-#new {
-    font-size: clamp(15px, 2vw, 20px);
-    height: clamp(1px, 8vh, 30px);
-    padding: 8px 3vw;
-    margin: 0;
+.scoreBox, #letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color1);
 }
 
-.box {
-
+.scoreBox {
+    font-size: clamp(22px, 1.8vw, 30px);
 }
 
-ul {
-    height: 30vh;
-    border: 0.5vw solid var(--color5);
+#letter {
+    width: clamp(25px, 5em, 60px);
+    height: clamp(30px, 5em, 60px);
+    font-size: clamp(25px, 3vw, 50px);
+    border-radius: 1em 1em 0 0;
+    border: 0.3vh solid var(--color5);
+    border-bottom: none;
+    background-color: var(--color2);
+    font-weight: 900;
+    padding: 1em 0.8em 0.8em 0.8em;
+}
+
+#listBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+}
+
+#list {
+    width: 70vw;
+    height: clamp(50px, 50vh, 700px);
+    border: 0.3vh solid var(--color5);
     border-radius: 4vw;
-    
 }
+
+
+
+/* PAGE 4 - SET SCORE OR END */
+
+#page4 {
+    display: none;
+}
+
+#result1, #result2 {
+    width: clamp(25px, 5em, 60px);
+    height: clamp(25px, 5em, 50px);
+}
+
+#setScore {
+    font-size: clamp(22px, 3vw, 25px);
+    height: 5vh;
+    padding: 8px 3vw;
+    margin: 3vh;
+}
+
+
+
+
