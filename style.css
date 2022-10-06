@@ -122,6 +122,15 @@ form {
     color: var(--color1);
 }
 
+#setResults {
+    height: clamp(2px, 15vh, 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0.9em 0.9em 0.9em;
+    margin: 0;
+}
+
 .scoreBox {
     font-size: clamp(22px, 1.8vw, 30px);
 }
@@ -147,15 +156,22 @@ form {
 }
 
 #list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(30px, 3vw, 45px);
     width: 70vw;
     height: clamp(50px, 50vh, 700px);
     border: 0.3vh solid var(--color5);
     border-radius: 4vw;
+    list-style: none;
+    gap: 4vh;
 }
 
 
 
-/* PAGE 4 - SET SCORE OR END */
+/* PAGE 4 - SET SCORE AND END */
 
 #page4 {
     display: none;
