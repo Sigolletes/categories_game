@@ -1,6 +1,23 @@
 
 // VARIABLES
 
+    // MENU
+
+const 
+    menuIcon = document.querySelector("#menuIcon"),
+    fullScreen = document.querySelector("#fullScreen"),
+    darkMode = document.querySelector("#darkMode"),
+    helpMenu = document.querySelector("#helpMenu"),
+    initialPage = document.querySelector("#initialPage"),
+    menuButton = document.querySelector("#menuButton"),
+    menuDiv = document.querySelector("#menuDiv");
+
+    // HELP AND CREDITS PAGES
+
+const
+    helpPage = document.querySelector("#helpPage"),
+    creditsPage = document.querySelector("#creditsPage");
+
     // PAGE 1
 
 const 
@@ -63,12 +80,96 @@ let
 
 
 
+// MENU
+
+menuIcon.addEventListener("click", () => {
+    menuDiv.style.display = "none";
+    menu.style.display = "flex";
+});
+
+back.addEventListener("click", () => {
+    menuDiv.style.display = "flex";
+    menu.style.display = "none";
+});
+
+fullScreen.addEventListener("click", () => {
+   
+});
+
+darkMode.addEventListener("click", () => {
+  
+});
+
+helpMenu.addEventListener("click", () => {
+    page1.style.display = "none";
+    page2.style.display = "none";
+    page3.style.display = "none";
+    page4.style.display = "none";
+    page5.style.display = "none";
+    menu.style.display = "none";
+    helpPage.style.display = "flex";
+    creditsPage.style.display = "none";
+    menuDiv.style.display = "flex";
+});
+
+initialPage.addEventListener("click", () => {
+    page1.style.display = "flex";
+    page2.style.display = "none";
+    page3.style.display = "none";
+    page4.style.display = "none";
+    page5.style.display = "none";
+    menu.style.display = "none";
+    helpPage.style.display = "none";
+    creditsPage.style.display = "none";
+    menuDiv.style.display = "flex";
+});
+
+
+
 // PAGE 1 - START
 
 startGame.addEventListener("click", () => {
     page1.style.display = "none";
     page2.style.display = "flex";
-})
+    page3.style.display = "none";
+    page4.style.display = "none";
+    page5.style.display = "none";
+    menu.style.display = "none";
+    helpPage.style.display = "none";
+    creditsPage.style.display = "none";
+    menuDiv.style.display = "flex";
+
+    scoreOne = 0;
+    scoreTwo = 0;
+    score1.textContent = "";
+    score2.textContent = "";
+    player1.value = "";
+    player2.value = "";
+});
+
+help.addEventListener("click", () => {
+    page1.style.display = "none";
+    page2.style.display = "none";
+    page3.style.display = "none";
+    page4.style.display = "none";
+    page5.style.display = "none";
+    menu.style.display = "none";
+    helpPage.style.display = "flex";
+    creditsPage.style.display = "none";
+    menuDiv.style.display = "flex";
+});
+
+credits.addEventListener("click", () => {
+    page1.style.display = "none";
+    page2.style.display = "none";
+    page3.style.display = "none";
+    page4.style.display = "none";
+    page5.style.display = "none";
+    menu.style.display = "none";
+    helpPage.style.display = "none";
+    creditsPage.style.display = "flex";
+    menuDiv.style.display = "flex";
+});
 
 
 
@@ -220,7 +321,7 @@ const categories = [
     "In the kitchen", "Recreational activities", "Agriculture", "Technology", "Toodler things",
     "Plants", "Elder things", "Food", "In the city", "Countries",
     "In the countryside", "Science", "Romantic things", "Trees", "Music",
-    "Art", "Flowers", "Subjects", "In a stationer's shop", "Geniuses (science, art, music...)"
+    "Art", "Flowers", "Subjects", "In a stationer's shop", "Geniuses (science, art, music...)", "Elements", "climate"
 ]
 
 const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];

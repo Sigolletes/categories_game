@@ -6,16 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/yahfie" type="text/css"/>
-
     <script src="script.js" defer></script>
+
+    <link href='https://css.gg/menu.css' rel='stylesheet'>
+    <link href='https://css.gg/move-left.css' rel='stylesheet'>
+
     <title>Categories game</title>
 </head>
 <body>
+
+ 
+<!-- MENU -->
+
+<div id="menuDiv">
+    <button type="button" id="menuIcon"><i class="gg-menu"></i></button>
+</div>
+
+<div id="menu">
+    <button type="button" id="fullScreen" class="menuButton">FULL SCREEN</button>
+
+    <button type="button" id="darkMode" class="menuButton">DARK MODE</button>
+
+    <button type="button" id="helpMenu" class="menuButton">HELP</button>
+
+    <button type="button" id="initialPage" class="menuButton">INITIAL PAGE</button>
+
+    <button type="button" id="back" class="menuButton"><i class="gg-move-left"></i></button>
+</div>
+
 
 
 <!-- PAGE 1 - START -->
 
     <div class="container" id="page1">
+
         <button id="startGame" type="button">START GAME</button>
 
         <button id="help" type="button">HELP</button>
@@ -61,8 +85,6 @@
 
             </div>
 
-            <button type="button" id="setResults">SET RESULTS</button>
-
             <div class="scoreBox">
 
                 <div id="name2"></div>
@@ -79,6 +101,9 @@
             <ul id="list"></ul>
 
         </div>
+
+        <button type="button" id="setResults">SET RESULTS</button>
+
     </div>
 
 
@@ -128,6 +153,29 @@
 
     <button type="button" id="home">HOME</button>
 
+</div>
+
+
+
+
+<!-- HELP -->
+
+<div class="container" id="helpPage">
+    <h1>INSTRUCTIONS</h1>
+    <p>You'll be given a list of 5 categories and a letter, you have to write down a word that starts with that letter and fits in that category without showing to your competitor; when both are done you share your answers and count the points:</p>
+    <h2>Correct answer: 1 point</h2>
+    <h2>No answer or incorrect one: 0 points</h2>
+    <h2>One have a correct answer and the other don't: 2 points</h2>
+    <p>You'll need to set some rules about what is permitted and have a lot of fun.</p>
+</div>
+
+
+
+
+<!-- CREDITS -->
+
+<div class="container" id="creditsPage">
+    <h1>Coded by Sigolletes</h1>
 </div>
 
 
